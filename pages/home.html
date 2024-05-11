@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qué me conviene?</title>
+</head>
+<body>
+    <h1>Qué me conviene?</h1>
+    <h3>Te ayudamos a decidir...</h3>
+    <h2>En cuotas o al contado?</h2>
+    <form id="formChoice">
+        <label for="cash">Ingrese el precio al contado: </label>
+        <input type="number" name="cash" id="cash">
+        <label for="price-in-instalments">Ingrese el precio en cuotas: </label>
+        <input type="number" name="price-in-instalments" id="price-in-instalments">
+        <label for="dues">Cantidad de cuotas: </label>
+        <input type="number" name="dues" id="dues">
+        <label for="how">Cómo quiere indicar la inflación? </label>
+        <select name="how" id="how">
+            <option value="total">Inflación actual</option>
+            <option value="month">Por cuota</option>
+        </select>
+        <p>Si selecciona inflación actual ingresará un solo porcentaje de inflación, si selecciona por cuota le permitiremos ingresar la inflación estimativa para cada cuota</p>
+        <section id="trend">
+            <label for="expectative">La inflación tiende a... </label>
+            <select name="expectative" id="expectative">
+                <option value="up">Subir</option>
+                <option value="stable">Mantenerse</option>
+                <option value="down">Bajar</option>
+            </select>
+            <p>Si selecciona "Subir" calcularemos un 0,3% más de inflación para cada cuota</p>
+            <p>Si selecciona "Mantenerse" dejaremos la inflación en el valor indicado</p>
+            <p>Si selecciona "Bajar" calcularemos un 0,3% menos de inflación para cada cuota</p>
+        </section>
+        <div id="monthlyInflationInputs"></div>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <script src="../scripts/dues.js"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/home.css">
     <title>Qué me conviene?</title>
 </head>
 <body>
@@ -18,10 +19,12 @@
         <input type="number" name="dues" id="dues">
         <label for="how">Cómo quiere indicar la inflación? </label>
         <select name="how" id="how">
-            <option value="total">Inflación actual</option>
+            <option value="actual">Inflación actual</option>
             <option value="month">Por cuota</option>
         </select>
         <p>Si selecciona inflación actual ingresará un solo porcentaje de inflación, si selecciona por cuota le permitiremos ingresar la inflación estimativa para cada cuota</p>
+        <label for="inflationRate">Inflación mensual: </label>
+        <input type="number" name="inflationRate" id="inflationRate">
         <section id="trend">
             <label for="expectative">La inflación tiende a... </label>
             <select name="expectative" id="expectative">
@@ -36,6 +39,13 @@
         <div id="monthlyInflationInputs"></div>
         <button type="submit">Calcular</button>
     </form>
+
+    <section id="result" class="d-none">
+        <h2>Resultado</h2>
+        <div id="cashResult"></div>
+        <div id="instalmentsResult"></div>
+        <p id="rightOption"></p>
+    </section>
 
     <script src="../scripts/dues.js"></script>
 </body>

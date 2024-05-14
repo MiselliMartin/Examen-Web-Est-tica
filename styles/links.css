@@ -17,6 +17,7 @@
 }
 
 #interestLinks li {
+  font-weight: 500;
   color: #181818;
   margin: 10px;
 }

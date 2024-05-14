@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Qué me conviene?</title>
 </head>
 <body>
-    <h1>Qué me conviene?</h1>
+    <nav class="barraNav">
+        <ul class="unList">
+          <li class="listNav">
+            <a class="linkNav" href="./home.html">Home</a>
+          </li>
+          <li class="listNav">
+            <a class="linkNav" href="./about.html">About</a>
+          </li>
+          <li class="listNav">
+            <a class="linkNav" href="./investment.html">Investment</a>
+          </li>
+        </ul>
+      </nav>
+    <!-- <h1>Qué me conviene?</h1> -->
     <h3>Te ayudamos a decidir...</h3>
     <h2>En cuotas o al contado?</h2>
     <form id="formChoice">
         <label for="cash">Ingrese el precio al contado: </label>
-        <input type="number" name="cash" id="cash">
+        <input type="number" name="cash" id="cash" placeholder="100000">
         <label for="price-in-instalments">Ingrese el precio en cuotas: </label>
-        <input type="number" name="price-in-instalments" id="price-in-instalments">
+        <input type="number" name="price-in-instalments" id="price-in-instalments" placeholder="160000">
         <label for="dues">Cantidad de cuotas: </label>
-        <input type="number" name="dues" id="dues">
+        <input type="number" name="dues" id="dues" placeholder="12">
         <label for="how">Cómo quiere indicar la inflación? </label>
         <select name="how" id="how">
             <option value="actual">Inflación actual</option>
@@ -28,13 +43,13 @@
         <p>Si selecciona inflación actual ingresará un solo porcentaje de inflación, si selecciona por cuota le permitiremos ingresar la inflación estimativa para cada cuota</p>
         <div id="inflationDiv">
             <label for="inflationRate">Inflación mensual: </label>
-            <input type="number" name="inflationRate" id="inflationRate">
+            <input type="number" name="inflationRate" id="inflationRate" value="8.8" step="0.01">
         </div>
         <section id="trend">
             <label for="expectative">La inflación tiende a... </label>
             <select name="expectative" id="expectative">
-                <option value="up">Subir</option>
                 <option value="stable">Mantenerse</option>
+                <option value="up">Subir</option>
                 <option value="down">Bajar</option>
             </select>
             <p>Si selecciona "Subir" calcularemos un 0,3% más de inflación para cada cuota</p>

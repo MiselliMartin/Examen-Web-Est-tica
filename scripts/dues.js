@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 input.type = "number";
                 input.name = "inflation-for-month-" + i;
                 input.placeholder = "Inflación para la cuota " + i;
+                input.value = 8.8;
+                input.step = 0.01; 
                 input.classList.add("inflation-input");
                 monthlyInflationInputs.appendChild(input);
             }
         }
-
-        
     }
 
     how.addEventListener("change", () => {
@@ -83,8 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log(precioActualCuota)
                 totalValueInstalments += precioActualCuota;
             }
-        } else {
-            const inputsInflation = document.querySelectorAll(".inflation-input");
+        } else if (howValue === "month") {
+            const inflationInputs = document.querySelectorAll(".inflation-input");
+            inflationInputs.forEach((input, i) => {
+                let tasaInflacionMensual = parseFloat(input.value);
+                let precioActualCuota = calcularValorActual(valorCuota, tasaInflacionMensual, i + 1); //(i + 1) porque el mes 1 sería el input 0 
+                totalValueInstalments += precioActualCuota;
+            });
         }
 
         sectionResult.style.display = 'block'

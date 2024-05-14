@@ -1,0 +1,70 @@
+.barraNav {
+  width: 100%;
+  color: white;
+}
+
+.unList {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: flex-end;
+  list-style-type: none;
+  background-color: #0f3a21;
+  padding: 10px;
+  width: 100%;
+}
+
+.listNav {
+  margin: 0 15px;
+}
+
+.linkNav {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
+  transition: color 0.3s;
+}
+
+.linkNav:hover {
+  color: #1abc9c;
+}
+
+.linkNav:active {
+  color: #16a085;
+}
+
+.unList, .listNav, .linkNav {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.listNav .linkNav {
+  padding: 10px 15px;
+}
+
+.listNav .linkNav {
+  border: 2px solid transparent;
+}
+
+.listNav .linkNav:hover {
+  border: 2px solid #1abc9c;
+}
+
+.listNav .linkNav:active {
+  border: 2px solid #16a085;
+}
+
+/* Media query para pantallas medianas */
+@media (width > 768px) {
+  .linkNav {
+    font-size: normal;
+  }
+}
+
+/* Media query para pantallas grandes */
+@media (width > 1024px) {
+  .linkNav {
+    font-size: larger;
+  }
+}

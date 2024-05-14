@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const rigthOption = document.getElementById("rightOption")
     const explainRigthOption = document.getElementById("explainRigthOption")
     const expectative = document.getElementById("expectative")
+    const inflationDiv = document.getElementById("inflationDiv")
 
     const calcularValorActual = (valorFuturo, tasa, meses) => {
         return valorFuturo / Math.pow(1 + tasa/100, meses);
@@ -35,18 +36,23 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }
 
-    form.addEventListener("change", () => {
-        if (how.value === 'month') { 
-            trend.style.display = "none";
-        } else {
-            trend.style.display = "block";
-        }
+    how.addEventListener("change", () => {
 
         let duesValue = dues.value;
         let howValue = how.value;
         
 
         inputsMensuales(howValue, duesValue)
+    })
+
+    form.addEventListener("change", () => {
+        if (how.value === 'month') { 
+            trend.style.display = "none";
+            inflationDiv.classList.add("d-none");
+        } else {
+            trend.style.display = "block";
+            inflationDiv.classList.remove("d-none");
+        }
         
     });
 

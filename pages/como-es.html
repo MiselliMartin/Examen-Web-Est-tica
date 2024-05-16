@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/links.css">
+    <title>¿Cómo Funciona?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+  <nav class="barraNav">
+    <ul class="unList">
+      <li class="listNav">
+        <a class="linkNav" href="./que-me-conviene.html">que conviene</a>
+      </li>
+      <li class="listNav">
+        <a class="linkNav" href="./futuro.html">futuro</a>
+      </li>
+      <li class="listNav">
+        <a class="linkNav" href="./como-es.html">como es</a>
+      </li>
+    </ul>
+    </nav>
+  <div>
+    <h1>¿Cómo Funciona Esta Página?</h1>
+    <p>Nuestra página web te ayuda a decidir si es mejor comprar un bien al contado o en cuotas. Aquí te explicamos cómo realizamos los cálculos y qué factores consideramos para tomar la decisión.</p>
+
+    <h2>Cálculo del Valor Presente de las Cuotas</h2>
+    <p>Para determinar si es más conveniente pagar en efectivo o en cuotas, calculamos el valor presente de cada cuota. Esto se hace utilizando la fórmula de valor presente:</p>
+    <p><code>Valor Presente = Valor Futuro / (1 + Tasa de Inflación)^Número de Meses</code></p>
+    <p>Sumamos el valor presente de todas las cuotas para obtener el costo total en términos actuales.</p>
+
+    <h2>Inflación Estable</h2>
+    <p>Si la inflación se mantiene estable durante el período de las cuotas, utilizamos la tasa de inflación mensual proporcionada por el usuario para calcular el valor presente de cada cuota.</p>
+    <p>Por ejemplo, si la tasa de inflación mensual es del 8.8%, la fórmula para calcular el valor presente de la primera cuota sería:</p>
+    <p><code>Valor Presente Cuota 1 = Valor Cuota / (1 + 0.088)^1</code></p>
+    <p>Y para la segunda cuota:</p>
+    <p><code>Valor Presente Cuota 2 = Valor Cuota / (1 + 0.088)^2</code></p>
+
+    <h2>Inflación en Aumento</h2>
+    <p>Si se espera que la inflación aumente, ajustamos la tasa de inflación para cada cuota. Por ejemplo, si la inflación aumenta un 0.3% cada mes, la tasa de inflación para la segunda cuota sería del 9.1%, para la tercera cuota del 9.4%, y así sucesivamente.</p>
+    <p>La fórmula ajustada para la segunda cuota sería:</p>
+    <p><code>Valor Presente Cuota 2 = Valor Cuota / (1 + 0.091)^2</code></p>
+
+    <h2>Inflación en Disminución</h2>
+    <p>Si se espera que la inflación disminuya, reducimos la tasa de inflación para cada cuota. Por ejemplo, si la inflación disminuye un 0.3% cada mes, la tasa de inflación para la segunda cuota sería del 8.5%, para la tercera cuota del 8.2%, y así sucesivamente.</p>
+    <p>La fórmula ajustada para la segunda cuota sería:</p>
+    <p><code>Valor Presente Cuota 2 = Valor Cuota / (1 + 0.085)^2</code></p>
+
+    <h2>Decisión Final</h2>
+    <p>Finalmente, comparamos el costo total en términos actuales de las cuotas con el precio al contado. Si el costo total de las cuotas es menor, recomendamos pagar en cuotas. Si el precio al contado es menor, recomendamos pagar en efectivo.</p>
+
+    <p>Esta flexibilidad y precisión en los cálculos te permite tomar una decisión informada basada en tus expectativas sobre la inflación y tus preferencias de pago.</p>
+  </div>
+</body>
+</html>

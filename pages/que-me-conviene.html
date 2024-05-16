@@ -15,13 +15,13 @@
   <nav class="barraNav">
     <ul class="unList">
       <li class="listNav">
-        <a class="linkNav" href="./que-me-conviene.html">que me conviene</a>
+        <a class="linkNav" href="./que-me-conviene.html">que conviene</a>
       </li>
       <li class="listNav">
         <a class="linkNav" href="./futuro.html">futuro</a>
       </li>
       <li class="listNav">
-        <a class="linkNav" href="./links.html">links</a>
+        <a class="linkNav" href="./como-es.html">como es</a>
       </li>
     </ul>
   </nav>
@@ -31,8 +31,10 @@
     <form id="formChoice">
         <label for="cash">Ingrese el precio al contado: </label>
         <input type="number" name="cash" id="cash" placeholder="100000">
+        <span id="spanCash"></span>
         <label for="price-in-instalments">Ingrese el precio en cuotas: </label>
         <input type="number" name="price-in-instalments" id="price-in-instalments" placeholder="160000">
+        <span id="spanInstalments"></span>
         <label for="dues">Cantidad de cuotas: </label>
         <input type="number" name="dues" id="dues" placeholder="12">
         <label for="how">Cómo quiere indicar la inflación? </label>
@@ -44,6 +46,7 @@
         <div id="inflationDiv">
             <label for="inflationRate">Inflación mensual: </label>
             <input type="number" name="inflationRate" id="inflationRate" value="8.8" step="0.01">
+            <span id="spanInflation"></span>
         </div>
         <section id="trend">
             <label for="expectative">La inflación tiende a... </label>
@@ -60,12 +63,22 @@
         <button type="submit">Calcular</button>
     </form>
 
+    <div id="myModal" class="modal">
+      <div class="modal-content" id="modal-content">
+        <pre id="modalText"></pre>
+        <button id="cancelButton" class="btnModal cancel">Cancelar</button>
+        <button id="confirmButton" class="btnModal confirm">Confirmar</button>
+      </div>
+    </div>
+
     <section id="result" class="d-none">
         <h2 id="rightOption"></h2>
         <div id="cashResult"></div>
         <div id="instalmentsResult"></div>
         <p id="explainRigthOption"></p>
     </section>
+
+    <button ><a style="color: white" href="profile.html">Ver mi perfil</a></button>
 
     <script src="../scripts/dues.js"></script>
 </body>

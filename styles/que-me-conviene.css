@@ -60,7 +60,7 @@ input[type="number"], select {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 700;
 }
 
 button {
@@ -80,7 +80,14 @@ button:hover {
 }
 
 #result {
-  text-align: center;
+  padding: 10px;
+  color: black;
+  font-weight: 700;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #cashResult, #instalmentsResult, #explainRigthOption {
@@ -159,4 +166,74 @@ button:hover {
   #rightOption {
     font-size: 1.75rem;
   }
+}
+
+.invalid {
+  color: red;
+  font-weight: bold;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: black;
+  transition: all 0.3s ease;
+  
+}
+
+#modalText {
+  margin: 20px;
+  font-size: larger;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.btnModal {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos específicos para el botón cancel */
+.cancel {
+  background-color: #ff4d4d;
+  color: white;
+  border: 2px solid #ff4d4d;
+}
+
+.cancel:hover {
+  background-color: #e60000;
+  border-color: #e60000;
+}
+
+/* Estilos específicos para el botón confirm */
+.confirm {
+  background-color: #66cc66;
+  color: white;
+  border: 2px solid #66cc66;
+}
+
+.confirm:hover {
+  background-color: #4d994d;
+  border-color: #4d994d;
 }
